@@ -26,11 +26,21 @@ describe('Thermostat', function() {
     expect(thermostat.currentTemperature()).toEqual(10);
   });
 
-  it('temperature does not go above 25', function() {
+  it('temperature does not go above 25 when power saving mode is on', function() {
+    thermostat.powerSavingModeOn()
     for(let i = 1; i <= 15; i++){
       thermostat.up()
     };
     expect(thermostat.currentTemperature()).toEqual(25);
+  });
+
+  it('temperature does not go above 32 when power saving mode is off', function() {
+    thermostat.powerSavingModeOn()
+    thermostat.powerSavingModeOff()
+    for(let i = 1; i <= 15; i++){
+      thermostat.up()
+    };
+    expect(thermostat.currentTemperature()).toEqual(32);
   });
 
 });
