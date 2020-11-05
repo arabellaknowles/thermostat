@@ -12,16 +12,24 @@ class Thermostat {
   };
 
   up(){
-    if (this.currentTemperature() === this.MAXIMUM_TEMPERATURE){
+    if (this._isMaximumTemperature()){
       return 25;
     }
     return (this.temperature += 1);
   };
 
   down(){
-    if (this.currentTemperature() === this.MINIMUM_TEMPERATURE){
+    if (this._isMinimumTemperature()){
       return 10;
     }
     return this.temperature -= 1;
-    };
+  };
+
+  _isMinimumTemperature(){
+    return (this.currentTemperature() === this.MINIMUM_TEMPERATURE)
+  };
+
+  _isMaximumTemperature(){
+    return (this.currentTemperature() === this.MAXIMUM_TEMPERATURE)
+  };
 };
