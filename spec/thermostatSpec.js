@@ -1,8 +1,13 @@
 'use strict';
 
 describe('Thermostat', function() {
-  it('default temperature is 20 degrees', function() {
-    thermostat = new Thermostat
-    expect(thermostat.temparature()).toEqual(20);
+  var thermostat;
+
+  beforeEach(function() {
+    thermostat = new Thermostat();
+  });
+
+  it('default temperature is 20 degrees', function(){
+    expect(thermostat.currentTemperature()).toEqual(20);
   });
 });
