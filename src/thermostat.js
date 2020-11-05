@@ -11,14 +11,13 @@ class Thermostat {
   };
 
   up(){
-    return (this.temperature += 1)
+    return (this.temperature += 1);
   };
 
   down(){
     if (this.currentTemperature() === this.MINIMUM_TEMPERATURE){
       return 10;
-    }else 
-      return (this.temperature -= 1);
+    }
+    return this.temperature -= 1;
     };
-  };
 };
