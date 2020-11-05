@@ -27,7 +27,6 @@ describe('Thermostat', function() {
   });
 
   it('temperature does not go above 25 when power saving mode is on', function() {
-    thermostat.powerSavingModeOn()
     for(let i = 1; i <= 15; i++){
       thermostat.up()
     };
@@ -35,12 +34,19 @@ describe('Thermostat', function() {
   });
 
   it('temperature does not go above 32 when power saving mode is off', function() {
-    thermostat.powerSavingModeOn()
     thermostat.powerSavingModeOff()
     for(let i = 1; i <= 15; i++){
       thermostat.up()
     };
     expect(thermostat.currentTemperature()).toEqual(32);
+  });
+
+  it('resets to 20 with reset function', function(){
+    for(let i = 1; i <= 6; i++){
+      thermostat.up()
+    };
+    thermostat.reset()
+    expect(thermostat.currentTemperature()).toEqual(20);
   });
 
 });
