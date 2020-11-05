@@ -18,4 +18,11 @@ describe('Thermostat', function() {
   it('decreases temperature with down function', function(){
     expect(thermostat.down()).toEqual(19);
   });
+
+  it('temperature does not decrease below 10', function(){
+    for(let i = 1; i <= 15; i++){
+      thermostat.down()
+    };
+    expect(thermostat.currentTemperature()).toEqual(10);
+  });
 });
