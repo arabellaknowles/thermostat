@@ -4,6 +4,7 @@ class Thermostat {
   constructor(){
     this.temperature = 20;
     this.MINIMUM_TEMPERATURE = 10;
+    this.MAXIMUM_TEMPERATURE = 25;
   };
 
   currentTemperature(){
@@ -11,6 +12,9 @@ class Thermostat {
   };
 
   up(){
+    if (this.currentTemperature() === this.MAXIMUM_TEMPERATURE){
+      return 25;
+    }
     return (this.temperature += 1);
   };
 

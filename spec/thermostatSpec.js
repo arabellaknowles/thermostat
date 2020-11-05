@@ -25,4 +25,12 @@ describe('Thermostat', function() {
     };
     expect(thermostat.currentTemperature()).toEqual(10);
   });
+
+  it('temperature does not go above 25', function() {
+    for(let i = 1; i <= 15; i++){
+      thermostat.up()
+    };
+    expect(thermostat.currentTemperature()).toEqual(25);
+  });
+
 });
