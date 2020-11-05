@@ -5,6 +5,8 @@ class Thermostat {
     this.temperature = 20;
     this.MINIMUM_TEMPERATURE = 10;
     this.MAXIMUM_TEMPERATURE = 25;
+    this.LOW_USAGE_THRESHOLD = 18;
+    this.MEDIUM_USAGE_THRESHOLD = 25;
   };
 
   currentTemperature(){
@@ -44,5 +46,13 @@ class Thermostat {
   _isMaximumTemperature(){
     return (this.currentTemperature() === this.MAXIMUM_TEMPERATURE)
   };
-};
 
+  energyUsage(){
+    if (this.currentTemperature() < this.LOW_USAGE_THRESHOLD){
+      return "low usage";
+    }else if (this.LOW_USAGE_THRESHOLD <= this.currentTemperature() <=  this.MEDIUM_USAGE_THRESHOLD){
+      return "medium usage";
+    }
+  };
+
+};
