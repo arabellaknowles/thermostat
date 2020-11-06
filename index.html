@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Thermostat</title>
     <script src='src/thermostat.js'></script>
-  </head>
-  <body>
-  
+</head>
+
+<body>
+    <script src='./jquery.js'></script>
+    <script src="src/interface.js"></script>
+
+
     <!-- up/down buttons, digital screen for current temp, turn off/on power saving  -->
-    <button>Up</button>
-    <button>Down</button>
-    <button>PSM on</button>
-    <button>PSM off</button>
-    <button>Reset</button>
+    <button id="tempUp" class="temp-up">Up</button>
+    <button class="temp-up">Down</button>
+    <button class="psm">PSM on</button>
+    <button class="psm">PSM off</button>
+    <button class="reset">Reset</button>
     <p>Current temperature is: </p>
 
 
 
-  </body>
+</body>
+
 </html>
