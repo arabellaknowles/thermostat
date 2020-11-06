@@ -10,18 +10,17 @@
 <body>
     <script src='./jquery.js'></script>
     <script src="src/interface.js"></script>
+    <script src="src/thermostat.js"></script>
 
 
     <!-- up/down buttons, digital screen for current temp, turn off/on power saving  -->
     <button id="tempUp" class="temp-up">Up</button>
-    <button class="temp-up">Down</button>
-    <button class="psm">PSM on</button>
-    <button class="psm">PSM off</button>
-    <button class="reset">Reset</button>
-    <p>Current temperature is: </p>
-
-
-
+    <button id="tempDown" class="temp-up">Down</button>
+    <button id="psmOn" class="psm">PSM on</button>
+    <button id="psmOff" class="psm">PSM off</button>
+    <button id="reset" class="reset">Reset</button>
+    <p id="temperature"></p>
+    <p id="psmoff"></p>
+    <p id="psmon"></p>
 </body>
-
 </html>
