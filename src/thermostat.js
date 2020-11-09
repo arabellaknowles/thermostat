@@ -49,11 +49,11 @@ class Thermostat {
 
   energyUsage(){
     if (this.currentTemperature() < this.LOW_USAGE_THRESHOLD){
-      return "low usage";
+      return "low-usage";
     }else if ((this.LOW_USAGE_THRESHOLD <= this.currentTemperature()) && ( this.currentTemperature() <=  this.HIGH_USAGE_THRESHOLD)) {
-      return "medium usage";
+      return "medium-usage";
     }else {
-      return "high usage";
+      return "high-usage";
     }
   };
 };
