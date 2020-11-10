@@ -1,11 +1,29 @@
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('put_the_location_to_your_font.ttf or .otf');
+ }
+
+body {
+  text-align: center;
+  font-size: medium;
+  color: #ffffff;
+  background-color: #000000;
+  font-family: sans-serif;
+}
+
 .low-usage {
   color: green;
 }
 
 .medium-usage {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .high-usage {
   color: red;
 }
+
+#temperature {
+  font-family: 'digital-clock-font';
+}
+
