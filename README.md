@@ -13,6 +13,6 @@ $ open SpecRunner.html
 - Clone this repository
 - In your terminal run:
 ```
-open index.html
+$ open index.html
 ```
 
