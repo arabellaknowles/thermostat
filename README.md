@@ -13,6 +13,10 @@ $ open SpecRunner.html
 - Clone this repository
 - In your terminal run:
 ```
+bundle install
+```
+- In your terminal run:
+```
 $ open index.html
 ```
 
